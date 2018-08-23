@@ -14,7 +14,7 @@ minor_r: 0.85
 mass: 1.0
 body_centers: [8.0,6.0]
 orientations: [0.0]
-circulations: [-18.0]
+circulations: [-18.8]
 singularities: 20
 lam: 2
 rho: 0.8
