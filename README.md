@@ -10,7 +10,7 @@
 
 To install:
   - python v3.x
-To save animations to file:
+- To save animations to file:
   - imagemagick image software suite      (https://www.imagemagick.org/script/download.php)
   - ffmpeg multimedia software suite      (https://www.ffmpeg.org/download.html)
   
@@ -44,9 +44,9 @@ To install imagemagick and ffmpeg: (needed for saving animations to file)
     it is recommended to use the Homebrew package manager for MacOS to install
     imagemagick and ffmpeg
     
-    Homebrew can be downloaded at: https://brew.sh/
+    - Homebrew can be downloaded at: https://brew.sh/
     
-    Once Homebrew is installed, run at the command line:
+    - Once Homebrew is installed, run at the command line:
         
         brew install imagemagick
         brew install ffmpeg
@@ -110,7 +110,7 @@ where the ... are the relevant system model parameters (see class documentation)
 
 Demo files are included. To operate,
 
-  - move to the 'demos' directory in the MFSimulator folder (in the MFS-software-package folder)
+  - move to the 'demos' directory in the MFSimulator folder (in the root MFSimulator folder)
   - will see THREE python script files and FOUR yml text files
   
   The yml text files consist of dictionaries that define the simulation parameters
@@ -120,7 +120,7 @@ Demo files are included. To operate,
   
   To run the demos, making sure you are in the 'demos' directory, run (for example):
   
-  python3 StaticFlowVisualization.py --model one-circle-circulation.yml
+    python3 StaticFlowVisualization.py --model one-circle-circulation.yml
   
   which, in this case, will demonstrate the program's static flow field visualization
   capabilities for a fluid-body system consisting of one circle in unbounded flow with
@@ -147,12 +147,12 @@ Enjoy!
 ***********************************************************************************
   
   TO UNINSTALL:
-    at the command line, type:
-      pip3 uninstall MFSimulator
+    - at the command line, type:
+        pip3 uninstall MFSimulator
       
-    -or, possibly (depending on python version/path aliases)
+    - or, possibly (depending on python version/path aliases)
       
-      pip uninstall MFSimulator
+        pip uninstall MFSimulator
       
       
 
