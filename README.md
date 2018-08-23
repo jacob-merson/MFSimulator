@@ -84,6 +84,9 @@ To install imagemagick and ffmpeg: (needed for saving animations to file)
     MFSimulator package. Will, however, need to make sure the paths to ffmpeg.exe and convert.exe
     are set correctly in the 'simulator.py' module
     
+    Additional information about installing ffmpeg is available at http://blog.gregzaal.com/how-to-install-ffmpeg-on-windows/
+    ffmpeg should come as part of ImageMagick on Windows, and the above link is outdated by a few years, but the instructions on how to set environmental variables paths are still valid (and may require a PC restart before they take effect)
+    
     
 ***********************************************************************************
 3. Usage
