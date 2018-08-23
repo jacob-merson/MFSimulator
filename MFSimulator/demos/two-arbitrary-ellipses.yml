@@ -1,0 +1,34 @@
+length: 16.0
+width: 16.0
+grid_density: 10
+boundary_type: 'Unbounded'
+dtype: 'float32'
+CPU: 'On'
+fluid_density: 1.225
+fluid_velocity: 1.0
+num_bodies: 2
+body_shape: 'ellipse'
+radius: 1.5
+major_r: 2.0
+minor_r: 0.85
+mass: 1.0
+body_centers: [[8.0,8.0],[4.0,2.0]]
+orientations: [30.0,0.0]
+circulations: [6.3,0.0]
+singularities: 20
+lam: 2
+rho: 0.8
+simTime: 2.0
+dt: 0.001
+save_animation: 'Off'
+animation_format: 'mp4'
+animation_name: 'two_arbitrary_ellipses_animation'
+
+
+
+
+
+
+
+
+

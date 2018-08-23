@@ -1,0 +1,27 @@
+length: 16.0
+width: 12.0
+grid_density: 10
+boundary_type: 'Unbounded'
+dtype: 'float32'
+CPU: 'On'
+fluid_density: 1.225
+fluid_velocity: 1.0
+num_bodies: 1
+body_shape: 'circle'
+radius: 1.5
+major_r: 2.0
+minor_r: 0.85
+mass: 1.0
+body_centers: [8.0,6.0]
+orientations: [0.0]
+circulations: [-18.0]
+singularities: 20
+lam: 2
+rho: 0.8
+simTime: 2.0
+dt: 0.001
+save_animation: 'Off'
+animation_format: 'mp4'
+animation_name: 'circular_cylinder_with_circulation_animation'
+
+
