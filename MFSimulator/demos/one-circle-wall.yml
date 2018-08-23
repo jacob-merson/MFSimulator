@@ -12,13 +12,13 @@ radius: 1.5
 major_r: 2.0
 minor_r: 0.85
 mass: 1.0
-body_centers: [6.0,3.0]
+body_centers: [6.0,2.0]
 orientations: [0.0]
 circulations: [0.0]
 singularities: 20
 lam: 2
 rho: 0.8
-simTime: 2.0
+simTime: 3.0
 dt: 0.001
 save_animation: 'Off'
 animation_format: 'mp4'

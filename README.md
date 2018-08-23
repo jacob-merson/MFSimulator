@@ -9,26 +9,29 @@
 ***********************************************************************************
 
 To install:
-  python v3.x
+  - python v3.x
 To save animations to file:
-  imagemagick image software suite      (https://www.imagemagick.org/script/download.php)
-  ffmpeg multimedia software suite      (https://www.ffmpeg.org/download.html)
+  - imagemagick image software suite      (https://www.imagemagick.org/script/download.php)
+  - ffmpeg multimedia software suite      (https://www.ffmpeg.org/download.html)
   
   
 ***********************************************************************************
 2. Installation
 ***********************************************************************************
 
+** The MFSimulator module has been designed for and extensively tested on macOS **
+** out of the box support for other OSes- particularly Windows- cannot be guaranteed! **
+
 To install the MFSimulator module,
 
   - either git clone the repository or download directly to local machine
-  - navigate to downloaded 'MFS-software-package' folder at the command line
+  - navigate to downloaded root 'MFSimulator' folder at the command line
   - ensure python v3.x is installed (can download at https://www.python.org/downloads/)
-  - at the command line, ensuring you are in the MFS-software-package folder, type:
+  - at the command line, ensuring you are in the root MFSimulator folder (the one with the setup.py file), type:
         
         python3 setup.py install
         
-        - or possibly (depending on the alias configuration of installed python versions)
+  - or possibly (depending on the alias configuration of installed python versions)
         
         python setup.py install
         
@@ -147,7 +150,7 @@ Enjoy!
     at the command line, type:
       pip3 uninstall MFSimulator
       
-      or, possibly (depending on python version/path aliases)
+    -or, possibly (depending on python version/path aliases)
       
       pip uninstall MFSimulator
       
