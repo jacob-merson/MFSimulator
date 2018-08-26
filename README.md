@@ -10,7 +10,9 @@
 
 To install:
   - python v3.x
-- To save animations to file:
+  - openCL
+
+To save animations to file:
   - imagemagick image software suite      (https://www.imagemagick.org/script/download.php)
   - ffmpeg multimedia software suite      (https://www.ffmpeg.org/download.html)
   
@@ -22,11 +24,11 @@ To install:
 ** The MFSimulator module has been designed for and extensively tested on macOS **
 ** out of the box support for other OSes- particularly Windows- cannot be guaranteed! **
 
-To install the MFSimulator module,
+**To install the MFSimulator module,**
 
   - either git clone the repository or download directly to local machine
   - navigate to downloaded root 'MFSimulator' folder at the command line
-  - ensure python v3.x is installed (can download at https://www.python.org/downloads/)
+  - ensure python v3.x is installed (can download at https://www.python.org/downloads/ or the Anaconda distribution and package manager at https://www.anaconda.com/download/)
   - at the command line, ensuring you are in the root MFSimulator folder (the one with the setup.py file), type:
         
         python3 setup.py install
@@ -38,56 +40,96 @@ To install the MFSimulator module,
   The MFSimulator package, along with all its dependencies, will be automatically installed
   and the MFSimulator package will be available for system-wide use
   
-To install imagemagick and ffmpeg: (needed for saving animations to file)
+**To install imagemagick and ffmpeg: (needed for saving animations to file)**
 
-  MacOS:
-    it is recommended to use the Homebrew package manager for MacOS to install
-    imagemagick and ffmpeg
+  MacOS:  
+  it is recommended to use the Homebrew package manager for MacOS to install imagemagick and ffmpeg  
     
-    - Homebrew can be downloaded at: https://brew.sh/
+    Homebrew can be downloaded at: https://brew.sh/  
     
-    - Once Homebrew is installed, run at the command line:
+    Once Homebrew is installed, run at the command line:
         
         brew install imagemagick
         brew install ffmpeg
         
         
-  Linux:
-    
-    At the command line:
+  Linux:  
+  At the command line:
     
       sudo apt-get update
-      sudo apt-get install imagemagick    (more help available at https://help.ubuntu.com/community/ImageMagick)
-
-    - If using Ubuntu 18.04 or 16.04:
-        sudo add-apt-repository ppa:jonathonf/ffmpeg-3
+      sudo apt-get install imagemagick
       
-    - If using Ubuntu 14.04:
-        sudo add-apt-repository ppa:jonathonf/tesseract
+  - (more help available at https://help.ubuntu.com/community/ImageMagick)
+
+  - If using Ubuntu 18.04 or 16.04:
+  
+      sudo add-apt-repository ppa:jonathonf/ffmpeg-3
+      
+  - If using Ubuntu 14.04:
+  
+      sudo add-apt-repository ppa:jonathonf/tesseract
         
       sudo apt-get update
-      sudo apt-get install ffmpeg libav-tools x264 x265   (more help available at https://tecadmin.net/install-ffmpeg-on-linux/)
+      sudo apt-get install ffmpeg libav-tools x264 x265
+      
+  - (more help available at https://tecadmin.net/install-ffmpeg-on-linux/)
       
       
-  Windows:
+  Windows:  
+  Not recommended, attempt to install ImageMagick and ffmpeg correctly at own risk:
+    
+  **installing just ImageMagick SHOULD also install ffmpeg**
+    
+  - Download the ImageMagick Windows Binary (http://www.imagemagick.org/script/download.php#windows)
+    
+  - unpack and install to Program Files
+    
+  Need to add the paths to ffmpeg.exe and convert.exe in the environment variables list
+  to be able to use them at the command line, BUT, do not need to for use with the
+  MFSimulator package. Will, however, need to make sure the paths to ffmpeg.exe and convert.exe
+  are set correctly in the 'simulator.py' module
   
-    Not recommended, attempt to install ImageMagick and ffmpeg correctly at own risk:
-    
-    ** installing just ImageMagick SHOULD also install ffmpeg **
-    
-    Download the ImageMagick Windows Binary (http://www.imagemagick.org/script/download.php#windows)
-    
-    unpack and install to Program Files
-    
-    Need to add the paths to ffmpeg.exe and convert.exe in the environment variables list
-    to be able to use them at the command line, BUT, do not need to for use with the
-    MFSimulator package. Will, however, need to make sure the paths to ffmpeg.exe and convert.exe
-    are set correctly in the 'simulator.py' module
-    
-    Additional information about installing ffmpeg is available at http://blog.gregzaal.com/how-to-install-ffmpeg-on-windows/
-    ffmpeg should come as part of ImageMagick on Windows, and the above link is outdated by a few years, but the instructions on how to set environmental variables paths are still valid (and may require a PC restart before they take effect)
-    
-    
+  Additional information about installing ffmpeg is available at http://blog.gregzaal.com/how-to-install-ffmpeg-on-windows/
+  ffmpeg should come as part of ImageMagick on Windows, and the above link is outdated by a few years, but the instructions on how to set environmental variables paths are still valid (and may require a PC restart before they take effect)
+
+**To install PyOpenCL (UBUNTU)**
+
+At the command line,
+
+  sudo apt-get install python3-pyopencl
+
+or
+
+  sudo apt-get install python-pyopencl    (depending on set python paths/aliases)
+  
+Need to ensure that the necessary openCL enabled hardware drivers are installed. More info is available at https://wiki.tiker.net/PyOpenCL/Installation/Linux/Ubuntu
+
+And, more generally,
+
+https://wiki.tiker.net/PyOpenCL/Installation/Linux (information about setting up OpenCL as well as installing for other Linux distributions other than Ubuntu)
+
+**To install PyOpenCL (WINDOWS)**
+
+Ensure that OpenCL has been enabled (i.e. OpenCL compatible drivers for your CPU/graphics card have been
+installed)
+  
+Download the PyOpenCL Windows wheel file from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyopencl that corresponds
+to your version of openCL, type of system (32-bit or 64-bit), and version of python,
+where the string 'cl12' is for openCL v 1.2, 'cl21' is for openCL v 2.1,
+the string 'win32' at the end is the 32-bit version, 'win_amd64' the 64-bit version,
+and 'cp' followed by two numbers the version of python.
+
+So for example, the correct wheel for a 64-bit version of Windows, openCL 2.1, and python 3.6
+is 'pyopencl-2018.1.1+cl21-cp36-cp36m-win_amd64.whl'
+
+Then navigate to the directory with the wheel file and pip install the wheel,
+
+    pip3 install NAMEOFWHEEL.whl
+
+The MFSimulator installer should install all python package dependencies needed to run
+the program, though it may occasionally be necessary to manually install certain python
+packages with pip (typically prompted by the command line).
+
 ***********************************************************************************
 3. Usage
 ***********************************************************************************
@@ -149,13 +191,14 @@ Enjoy!
 4. Uninstall
 ***********************************************************************************
   
-  TO UNINSTALL:
+  TO UNINSTALL:  
     - at the command line, type:
+        
         pip3 uninstall MFSimulator
       
     - or, possibly (depending on python version/path aliases)
       
-        pip uninstall MFSimulator
+      pip uninstall MFSimulator
       
       
 
