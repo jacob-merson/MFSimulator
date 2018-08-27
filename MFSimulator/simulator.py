@@ -353,8 +353,8 @@ class Model(object):
 
         self.initial_orientations = np.copy(self.orientations)
 
-        self.circulations = np.asarray(circulations,dtype=self.dtype)/(2.0*np.pi)
-        # self.circulations = np.asarray(circulations,dtype=self.dtype)
+        # self.circulations = np.asarray(circulations,dtype=self.dtype)/(2.0*np.pi)
+        self.circulations = np.asarray(circulations,dtype=self.dtype)
 
         if any([self.body_centers.shape[0] != self.total_bodies,
                 self.circulations.size != self.total_bodies,
